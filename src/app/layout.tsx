@@ -1,30 +1,37 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "@/styles/globals.scss";
 
 export const metadata: Metadata = {
-  title: "LoudLemon Studio",
-  description: "Elevate your brand with modern web solutions",
+  title: "LoudLemon Studio | Modern Web & Brand Design",
+  description:
+    "Professional web design and brand development services. We create modern, responsive websites and compelling brand identities for businesses.",
+  keywords: [
+    "web design",
+    "brand development",
+    "web development",
+    "responsive design",
+    "digital agency",
+  ],
+  authors: [{ name: "LoudLemon Studio" }],
+  openGraph: {
+    title: "LoudLemon Studio | Modern Web & Brand Design",
+    description:
+      "Professional web design and brand development services. We create modern, responsive websites and compelling brand identities for businesses.",
+    url: "https://loudlemonstudio.com",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body>
         {children}
         <Analytics />
       </body>
