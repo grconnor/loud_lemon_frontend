@@ -1,0 +1,103 @@
+@import "../variables";
+
+// Features Section
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $dark;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: $gray;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Stats Section
+.stats-section {
+  background-color: $light;
+
+  .stat-item {
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      color: $primary;
+      margin-bottom: 0.5rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      color: $gray;
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+}
+
+// CTA Section
+.cta-section {
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  color: $white;
+  border-radius: $border-radius-lg;
+  margin: 0 1rem;
+
+  .cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $white;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-text {
+    font-size: 1.15rem;
+    color: rgba($white, 0.95);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+
+  .custom-button {
+    background-color: $white;
+    color: $primary;
+    border-color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($white, 0.9);
+      color: $primary-dark;
+      border-color: rgba($white, 0.9);
+    }
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .stats-section {
+    .stat-item {
+      margin-bottom: 2rem;
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .cta-section {
+    margin: 0;
+    border-radius: 0;
+
+    .cta-title {
+      font-size: 2rem;
+    }
+
+    .cta-text {
+      font-size: 1rem;
+    }
+  }
+}
