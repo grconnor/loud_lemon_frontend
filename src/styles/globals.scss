@@ -1,5 +1,5 @@
 // Import custom variables first
-@import "./variables";
+@use "./variables" as *;
 
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap";

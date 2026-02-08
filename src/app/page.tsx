@@ -1,9 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import MainLayout from "@/components/layout/MainLayout";
-// import Hero from "@/components/common/Hero";
-// import SectionHeading from "@/components/common/SectionHeading";
-// import Card from "@/components/common/Card";
-// import Button from "@/components/common/Button";
+import Hero from "@/components/common/Hero";
+import SectionHeading from "@/components/common/SectionHeading";
+import Card from "@/components/common/Card";
+import Button from "@/components/common/Button";
+
 import "@/styles/pages/Home.scss";
 
 export default function HomePage() {
@@ -37,17 +38,39 @@ export default function HomePage() {
 
   return (
     <MainLayout>
+      <Hero
+        title="Bold Digital Experiences That Make An Impact"
+        subtitle="We craft stunning websites and memorable brand identities that help businesses thrive in the digital world."
+        primaryButtonText="View Our Work"
+        primaryButtonLink="/portfolio"
+        secondaryButtonText="Get In Touch"
+        secondaryButtonLink="/contact"
+      />
+
+      {/* Features Section */}
       <section className="section-padding">
         <Container>
+          <SectionHeading
+            title="What We Do"
+            subtitle="We combine creativity with technical expertise to deliver outstanding digital solutions"
+            centered
+          />
+
           <Row className="gy-4">
             {features.map((feature, index) => (
               <Col key={index} lg={4} md={6}>
+                <Card hoverable>
+                  <div className="feature-icon">{feature.icon}</div>
+                  <h3 className="feature-title">{feature.title}</h3>
+                  <p className="feature-description">{feature.description}</p>
+                </Card>
               </Col>
             ))}
           </Row>
         </Container>
       </section>
 
+      {/* Stats Section */}
       <section className="stats-section section-padding">
         <Container>
           <Row className="gy-4">
@@ -63,6 +86,7 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* CTA Section */}
       <section className="cta-section section-padding">
         <Container>
           <Row>
@@ -72,6 +96,9 @@ export default function HomePage() {
                 Let&apos;s collaborate to bring your vision to life. Get in touch
                 with us today to discuss your project requirements.
               </p>
+              <Button variant="primary" size="lg" href="/contact">
+                Start a Conversation
+              </Button>
             </Col>
           </Row>
         </Container>

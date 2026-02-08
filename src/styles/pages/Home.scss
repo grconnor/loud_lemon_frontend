@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as *;
 
 // Features Section
 .feature-icon {
@@ -76,7 +76,6 @@
   }
 }
 
-// Mobile responsiveness
 @media (max-width: 768px) {
   .stats-section {
     .stat-item {
