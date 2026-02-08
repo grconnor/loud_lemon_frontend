@@ -1,0 +1,47 @@
+@use "../variables" as *;
+
+.section-heading {
+  margin-bottom: 3rem;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $dark;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: $gray;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, $primary 0%, $secondary 100%);
+    border-radius: 2px;
+  }
+
+  &.text-center {
+    .section-divider {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    margin-bottom: 2rem;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+    }
+  }
+}

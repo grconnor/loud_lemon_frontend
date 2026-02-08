@@ -1,0 +1,44 @@
+@use "../variables" as *;
+
+.custom-card {
+  border: none;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+
+  .card-img-top {
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    object-fit: cover;
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: $dark;
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      color: $gray;
+      line-height: 1.6;
+    }
+  }
+
+  &.hoverable {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+      .card-title {
+        color: $primary;
+      }
+    }
+  }
+}

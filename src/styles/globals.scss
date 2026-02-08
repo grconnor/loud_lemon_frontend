@@ -2,7 +2,7 @@
 @use "./variables" as *;
 
 // Import Bootstrap
-@use "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 // Global Styles
 *,
