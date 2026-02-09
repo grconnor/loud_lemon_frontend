@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayout from "@/components/layout/MainLayout";
 import Hero from "@/components/common/Hero";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
@@ -11,7 +10,7 @@ import "@/styles/pages/Home.scss";
 
 export default function HomePage() {
   return (
-    <MainLayout>
+    <>
       <Hero
         title="Bold Digital Experiences That Make An Impact"
         subtitle="We craft stunning websites and memorable brand identities that help businesses thrive in the digital world."
@@ -21,7 +20,6 @@ export default function HomePage() {
         secondaryButtonLink="/contact"
       />
 
-      {/* Features Section */}
       <section className="section-padding">
         <Container>
           <SectionHeading
@@ -48,7 +46,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Stats Section */}
       <section className="stats-section section-padding">
         <Container>
           <Row className="gy-4">
@@ -64,7 +61,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* CTA Section */}
       <section className="cta-section section-padding">
         <Container>
           <Row>
@@ -81,6 +77,6 @@ export default function HomePage() {
           </Row>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }

@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayout from "@/components/layout/MainLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
 import Button from "@/components/common/Button";
@@ -10,8 +9,7 @@ import "@/styles/pages/Services.scss";
 
 export default function ServicesPage() {
   return (
-    <MainLayout>
-      {/* Hero Section */}
+    <>
       <section className="services-hero section-padding">
         <Container>
           <Row>
@@ -26,7 +24,6 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* Services Section */}
       <section className="section-padding">
         <Container>
           <SectionHeading
@@ -58,7 +55,6 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* Process Section */}
       <section className="process-section section-padding">
         <Container>
           <SectionHeading
@@ -81,12 +77,11 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      {/* CTA Section */}
       <section className="services-cta section-padding">
         <Container>
           <Row>
             <Col lg={8} className="mx-auto text-center">
-              <h2 className="cta-title">Let's Build Something Amazing</h2>
+              <h2 className="cta-title">Let&apos;s Build Something Amazing</h2>
               <p className="cta-text">
                 Ready to take your digital presence to the next level? Get in
                 touch with us to discuss your project.
@@ -98,6 +93,6 @@ export default function ServicesPage() {
           </Row>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }

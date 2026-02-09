@@ -1,5 +1,4 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayout from "@/components/layout/MainLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
 
@@ -9,8 +8,7 @@ import "@/styles/pages/About.scss";
 
 export default function AboutPage() {
   return (
-    <MainLayout>
-      {/* Hero Section */}
+    <>
       <section className="about-hero section-padding">
         <Container>
           <Row>
@@ -25,7 +23,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Story Section */}
       <section className="section-padding">
         <Container>
           <Row className="align-items-center">
@@ -63,7 +60,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Values Section */}
       <section className="values-section section-padding">
         <Container>
           <SectionHeading
@@ -90,7 +86,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team Section */}
       <section className="section-padding">
         <Container>
           <SectionHeading
@@ -115,6 +110,6 @@ export default function AboutPage() {
           </Row>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }
