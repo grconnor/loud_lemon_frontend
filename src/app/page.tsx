@@ -4,38 +4,11 @@ import Hero from "@/components/common/Hero";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
 import Button from "@/components/common/Button";
+import { features, stats } from "@/data/home";
 
 import "@/styles/pages/Home.scss";
 
 export default function HomePage() {
-  const features = [
-    {
-      title: "Web Design",
-      description:
-        "Beautiful, modern websites that captivate your audience and deliver exceptional user experiences.",
-      icon: "🎨",
-    },
-    {
-      title: "Web Development",
-      description:
-        "Robust, scalable web applications built with cutting-edge technologies and best practices.",
-      icon: "💻",
-    },
-    {
-      title: "Brand Identity",
-      description:
-        "Distinctive brand identities that make your business memorable and stand out from competitors.",
-      icon: "✨",
-    },
-  ];
-
-  const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "40+", label: "Happy Clients" },
-    { number: "5+", label: "Years Experience" },
-    { number: "100%", label: "Client Satisfaction" },
-  ];
-
   return (
     <MainLayout>
       <Hero
@@ -60,9 +33,13 @@ export default function HomePage() {
             {features.map((feature, index) => (
               <Col key={index} lg={4} md={6}>
                 <Card hoverable>
-                  <div className="feature-icon">{feature.icon}</div>
-                  <h3 className="feature-title">{feature.title}</h3>
-                  <p className="feature-description">{feature.description}</p>
+                  <div className="feature-icon text-center">
+                    <feature.icon size={32} />
+                  </div>
+                  <h3 className="feature-title text-center">{feature.title}</h3>
+                  <p className="feature-description text-center">
+                    {feature.description}
+                  </p>
                 </Card>
               </Col>
             ))}
@@ -93,8 +70,8 @@ export default function HomePage() {
             <Col lg={8} className="mx-auto text-center">
               <h2 className="cta-title">Ready to Start Your Project?</h2>
               <p className="cta-text">
-                Let&apos;s collaborate to bring your vision to life. Get in touch
-                with us today to discuss your project requirements.
+                Let&apos;s collaborate to bring your vision to life. Get in
+                touch with us today to discuss your project requirements.
               </p>
               <Button variant="primary" size="lg" href="/contact">
                 Start a Conversation

@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
   sassOptions: {
-    silenceDeprecations: ["import", "color-functions", "global-builtin"],
     includePaths: ["src/styles"],
   },
 };
