@@ -1,6 +1,5 @@
 @use "../variables" as *;
 
-// Features Section
 .feature-icon {
   color: $primary;
   font-size: 3rem;
@@ -20,7 +19,6 @@
   margin: 0;
 }
 
-// Stats Section
 .stats-section {
   background-color: $light;
 
@@ -42,7 +40,6 @@
   }
 }
 
-// CTA Section
 .cta-section {
   background: linear-gradient(135deg, $primary 0%, $secondary 100%);
   color: $white;
@@ -77,6 +74,7 @@
   }
 }
 
+// Mobile responsiveness
 @media (max-width: 768px) {
   .stats-section {
     .stat-item {

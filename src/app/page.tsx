@@ -1,16 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayout from "@/components/layout/MainLayout";
 import Hero from "@/components/common/Hero";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
 import Button from "@/components/common/Button";
-import { features, stats } from "@/data/home";
+
+import { features, stats, FeatureItem, StatItem } from "@/data/home";
 
 import "@/styles/pages/Home.scss";
 
 export default function HomePage() {
   return (
-    <MainLayout>
+    <>
       <Hero
         title="Bold Digital Experiences That Make An Impact"
         subtitle="We craft stunning websites and memorable brand identities that help businesses thrive in the digital world."
@@ -20,7 +20,6 @@ export default function HomePage() {
         secondaryButtonLink="/contact"
       />
 
-      {/* Features Section */}
       <section className="section-padding">
         <Container>
           <SectionHeading
@@ -30,7 +29,7 @@ export default function HomePage() {
           />
 
           <Row className="gy-4">
-            {features.map((feature, index) => (
+            {features.map((feature: FeatureItem, index: number) => (
               <Col key={index} lg={4} md={6}>
                 <Card hoverable>
                   <div className="feature-icon text-center">
@@ -47,11 +46,10 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Stats Section */}
       <section className="stats-section section-padding">
         <Container>
           <Row className="gy-4">
-            {stats.map((stat, index) => (
+            {stats.map((stat: StatItem, index: number) => (
               <Col key={index} lg={3} md={6}>
                 <div className="stat-item text-center">
                   <h2 className="stat-number">{stat.number}</h2>
@@ -63,7 +61,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* CTA Section */}
       <section className="cta-section section-padding">
         <Container>
           <Row>
@@ -80,6 +77,6 @@ export default function HomePage() {
           </Row>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }

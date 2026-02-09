@@ -3,6 +3,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "@/styles/globals.scss";
+import NavBar from "@/components/layout/NavBar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: "LoudLemon Studio | Modern Web & Brand Design",
@@ -33,7 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <NavBar />
+        <main className="main-content">{children}</main>
+        <Footer />
         <Analytics />
         <SpeedInsights />
       </body>

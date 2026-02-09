@@ -1,4 +1,4 @@
-@import "../variables";
+@use "../variables" as *;
 
 .footer {
   background-color: $dark;
@@ -73,6 +73,16 @@
 
       strong {
         color: $white;
+      }
+
+      .footer-cta {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: $dark;
+          background-color: $primary-dark;
+        }
       }
     }
   }

@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Container, Nav, Navbar as BSNavbar } from "react-bootstrap";
 
@@ -9,8 +11,6 @@ const NavBar = () => {
     <BSNavbar expand="lg" className="navbar-custom" sticky="top">
       <Container>
         <BSNavbar.Brand as={Link} href="/" className="brand-logo">
-          {/* <span className="brand-text">Loud</span>
-          <span className="brand-text-accent">Lemon</span> */}
           <Image
             src="/images/LoudLemon-transparent.png"
             alt="loudlemon-logo"

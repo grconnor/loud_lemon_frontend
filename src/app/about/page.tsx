@@ -1,15 +1,14 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MainLayout from "@/components/layout/MainLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
-import { values, team } from "@/data/about";
+
+import { values, team, ValueItem, TeamMember } from "@/data/about";
 
 import "@/styles/pages/About.scss";
 
 export default function AboutPage() {
   return (
-    <MainLayout>
-      {/* Hero Section */}
+    <>
       <section className="about-hero section-padding">
         <Container>
           <Row>
@@ -24,7 +23,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Story Section */}
       <section className="section-padding">
         <Container>
           <Row className="align-items-center">
@@ -62,7 +60,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Values Section */}
       <section className="values-section section-padding">
         <Container>
           <SectionHeading
@@ -72,7 +69,7 @@ export default function AboutPage() {
           />
 
           <Row className="gy-4">
-            {values.map((value, index) => (
+            {values.map((value: ValueItem, index: number) => (
               <Col key={index} lg={3} md={6}>
                 <Card hoverable>
                   <div className="value-icon text-center">
@@ -89,7 +86,6 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* Team Section */}
       <section className="section-padding">
         <Container>
           <SectionHeading
@@ -99,7 +95,7 @@ export default function AboutPage() {
           />
 
           <Row className="gy-4 justify-content-center">
-            {team.map((member, index) => (
+            {team.map((member: TeamMember, index: number) => (
               <Col key={index} lg={5} md={6}>
                 <Card>
                   <div className="team-member">
@@ -114,6 +110,6 @@ export default function AboutPage() {
           </Row>
         </Container>
       </section>
-    </MainLayout>
+    </>
   );
 }
