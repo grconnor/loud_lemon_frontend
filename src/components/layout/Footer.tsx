@@ -73,7 +73,7 @@ const Footer = () => {
                     hello@loudlemonstudio.com
                   </a>
                 </p>
-                <Link href="/contact" className="btn btn-primary btn-sm mt-3">
+                <Link href="/contact" className="footer-cta btn btn-primary btn-sm mt-3">
                   Contact Us
                 </Link>
               </div>
