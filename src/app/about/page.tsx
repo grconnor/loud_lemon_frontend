@@ -2,52 +2,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import MainLayout from "@/components/layout/MainLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
+import { values, team } from "@/data/about";
 
 import "@/styles/pages/About.scss";
 
 export default function AboutPage() {
-  const values = [
-    {
-      title: "Creativity",
-      description:
-        "We believe in pushing boundaries and thinking outside the box to deliver unique, innovative solutions.",
-      icon: "🎨",
-    },
-    {
-      title: "Quality",
-      description:
-        "Excellence is not an option—it's our standard. We're committed to delivering exceptional work every time.",
-      icon: "⭐",
-    },
-    {
-      title: "Collaboration",
-      description:
-        "Your success is our success. We work closely with clients to ensure their vision comes to life.",
-      icon: "🤝",
-    },
-    {
-      title: "Innovation",
-      description:
-        "We stay ahead of trends and technologies to provide cutting-edge solutions that give you a competitive edge.",
-      icon: "💡",
-    },
-  ];
-
-  const team = [
-    {
-      name: "Co-Founder",
-      role: "Design & Development",
-      description:
-        "Passionate about creating beautiful, functional digital experiences with expertise in modern web technologies.",
-    },
-    {
-      name: "Co-Founder",
-      role: "Strategy & Development",
-      description:
-        "Dedicated to building scalable solutions and helping businesses establish strong digital presences.",
-    },
-  ];
-
   return (
     <MainLayout>
       {/* Hero Section */}
@@ -57,8 +16,8 @@ export default function AboutPage() {
             <Col lg={8} className="mx-auto text-center">
               <h1 className="page-title">About LoudLemon Studio</h1>
               <p className="page-subtitle">
-                We're a dynamic duo passionate about crafting exceptional web
-                experiences and building memorable brands that resonate.
+                We&apos;re a dynamic duo passionate about crafting exceptional
+                web experiences and building memorable brands that resonate.
               </p>
             </Col>
           </Row>
@@ -78,24 +37,24 @@ export default function AboutPage() {
             <Col lg={6}>
               <div className="story-content">
                 <p>
-                  LoudLemon Studio was born from a shared passion for creating
-                  digital experiences that make a lasting impact. As friends
-                  turned business partners, we combined our expertise in design
-                  and development to help businesses stand out in the digital
-                  landscape.
+                  LoudLemon Studio was born from a shared passion for building
+                  thoughtful, high-quality digital experiences that make a
+                  lasting impact. As longtime friends turned business partners,
+                  we combined technical expertise and strategic insight to help
+                  businesses stand out in the digital landscape.
                 </p>
                 <p>
                   We believe that great design should be accessible to
-                  businesses of all sizes. That's why we're committed to
-                  delivering premium quality work with a personal touch,
-                  ensuring every project reflects the unique character of our
-                  clients.
+                  businesses of all sizes. That&apos;s why we&apos;re committed
+                  to delivering solutions that are both reliable and
+                  distinctive, ensuring each website and brand reflects the
+                  unique character of the business it represents.
                 </p>
                 <p>
                   Our approach is simple: listen carefully, design thoughtfully,
-                  develop skillfully, and deliver excellence. We're not just
-                  here to build websites—we're here to help your business thrive
-                  online.
+                  develop skillfully and deliver excellence. We&apos;re not just
+                  here to build websites, we&apos;re here to help your business
+                  thrive online.
                 </p>
               </div>
             </Col>
@@ -116,7 +75,9 @@ export default function AboutPage() {
             {values.map((value, index) => (
               <Col key={index} lg={3} md={6}>
                 <Card hoverable>
-                  <div className="value-icon text-center">{value.icon}</div>
+                  <div className="value-icon text-center">
+                    <value.icon size={32} />
+                  </div>
                   <h3 className="value-title text-center">{value.title}</h3>
                   <p className="value-description text-center">
                     {value.description}
