@@ -2,7 +2,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import MainLayout from "@/components/layout/MainLayout";
 import SectionHeading from "@/components/common/SectionHeading";
 import Card from "@/components/common/Card";
-import { values, team } from "@/data/about";
+
+import { values, team, ValueItem, TeamMember } from "@/data/about";
 
 import "@/styles/pages/About.scss";
 
@@ -72,7 +73,7 @@ export default function AboutPage() {
           />
 
           <Row className="gy-4">
-            {values.map((value, index) => (
+            {values.map((value: ValueItem, index: number) => (
               <Col key={index} lg={3} md={6}>
                 <Card hoverable>
                   <div className="value-icon text-center">
@@ -99,7 +100,7 @@ export default function AboutPage() {
           />
 
           <Row className="gy-4 justify-content-center">
-            {team.map((member, index) => (
+            {team.map((member: TeamMember, index: number) => (
               <Col key={index} lg={5} md={6}>
                 <Card>
                   <div className="team-member">
