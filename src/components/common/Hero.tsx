@@ -36,7 +36,7 @@ const Hero = ({
                       variant="primary"
                       size="lg"
                       href={primaryButtonLink}
-                      className="me-3"
+                      className="me-3 primary-hero-button"
                     >
                       {primaryButtonText}
                     </Button>
@@ -47,6 +47,7 @@ const Hero = ({
                       variant="outline-secondary"
                       size="lg"
                       href={secondaryButtonLink}
+                      className="secondary-hero-button"
                     >
                       {secondaryButtonText}
                     </Button>

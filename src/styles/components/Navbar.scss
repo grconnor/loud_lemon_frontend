@@ -13,6 +13,57 @@
     align-items: center;
   }
 
+  .custom-toggler {
+    border: none;
+    padding: 0.5rem;
+    width: 30px;
+    height: 22px;
+    position: relative;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background-color: $dark;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      left: 0;
+    }
+
+    span:nth-child(1) {
+      top: 0;
+    }
+
+    span:nth-child(2) {
+      top: 9px;
+    }
+
+    span:nth-child(3) {
+      top: 18px;
+    }
+
+    &:not(.collapsed) {
+      span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 9px;
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 9px;
+      }
+    }
+  }
+
   .brand-logo {
     display: flex;
     align-items: center;
@@ -51,18 +102,24 @@
     &.active {
       color: $primary;
     }
-  }
 
-  .nav-link-cta {
-    color: $white;
-    background-color: $primary;
-    margin-left: 0.5rem;
+    &-cta {
+      color: $dark;
+      background-color: $primary;
+      margin-left: 0.5rem;
+      border: 1px solid $primary;
 
-    &:hover,
-    &:focus {
-      color: $white;
-      background-color: $primary-dark;
-      transform: translateY(-2px);
+      &:hover,
+      &:focus {
+        color: $dark;
+        background-color: $white;
+        border: 1px solid $primary-dark;
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        color: $white !important;
+      }
     }
   }
 }
@@ -71,7 +128,13 @@
 @media (max-width: 991px) {
   .navbar-custom {
     .navbar-collapse {
-      margin-top: 1rem;
+      background-color: $white;
+      padding: 1rem 0;
+    }
+
+    .brand-logo {
+      height: 100%;
+      width: auto;
     }
 
     .nav-link-cta {
