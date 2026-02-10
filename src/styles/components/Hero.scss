@@ -74,6 +74,14 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
+
+      .primary-hero-button {
+        &:hover,
+        &:focus {
+          color: $primary;
+          background-color: $white;
+        }
+      }
     }
   }
 }
@@ -97,10 +105,14 @@
         flex-direction: column;
         align-items: center;
 
-        .custom-button {
-          width: 100%;
-          max-width: 300px;
-          margin: 0 0 1rem 0 !important;
+        .primary-hero-button {
+          margin: 0 !important;
+          min-width: 185px;
+        }
+
+        .secondary-hero-button {
+          min-width: 185px;
+          margin: 0 !important;
         }
       }
     }

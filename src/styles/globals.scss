@@ -29,7 +29,7 @@ body {
 }
 
 .main-content {
-  min-height: calc(100vh - 90px - 371.52px);
+  min-height: calc(100vh - 90px - 200px);
 }
 
 h1,
@@ -121,18 +121,5 @@ button {
 
   h3 {
     font-size: 1.5rem;
-  }
-}
-
-// Mobile responsiveness
-@media (max-width: 991px) {
-  .main-content {
-    min-height: calc(100vh - 90px - 591.02px);
-  }
-}
-
-@media (max-width: 768px) {
-  .main-content {
-    min-height: calc(100vh - 90px - 1011.53px);
   }
 }

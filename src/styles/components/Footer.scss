@@ -76,12 +76,13 @@
       }
 
       .footer-cta {
-        color: $white;
+        color: $dark;
 
         &:hover,
         &:focus {
-          color: $dark;
+          color: $light;
           background-color: $primary-dark;
+          border: 1px solid $primary-dark;
         }
       }
     }
