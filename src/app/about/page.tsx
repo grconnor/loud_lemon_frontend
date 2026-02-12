@@ -1,10 +1,18 @@
+import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
-import SectionHeading from '@/components/common/SectionHeading';
+
 import Card from '@/components/common/Card';
+import SectionHeading from '@/components/common/SectionHeading';
 
 import { values, team } from '@/data/about';
 
 import '@/styles/pages/About.scss';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Learn more about LoudLemon Studio, our design philosophy and how we help businesses grow online.',
+};
 
 export default function AboutPage() {
   return (

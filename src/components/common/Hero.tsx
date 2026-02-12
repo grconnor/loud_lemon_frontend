@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
-import Button from './Button';
+
+import Button from '@/components/common/Button';
 
 import '@/styles/components/Hero.scss';
 

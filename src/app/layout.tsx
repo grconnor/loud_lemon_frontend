@@ -1,14 +1,19 @@
 import Script from 'next/script';
 import type { Metadata } from 'next';
+
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
-import '@/styles/globals.scss';
 import NavBar from '@/components/layout/NavBar';
 import Footer from '@/components/layout/Footer';
 
+import '@/styles/globals.scss';
+
 export const metadata: Metadata = {
-  title: 'LoudLemon Studio | Modern Web & Brand Design',
+  title: {
+    default: 'LoudLemon Studio | Modern Web & Brand Design',
+    template: '%s | LoudLemon Studio',
+  },
   description:
     'Professional web design and brand development services. We create modern, responsive websites and compelling brand identities for businesses.',
   keywords: [

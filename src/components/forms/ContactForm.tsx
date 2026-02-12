@@ -1,8 +1,11 @@
+"use client";
+
+import emailjs from '@emailjs/browser';
 import type { ComponentProps } from 'react';
 import { useState, ChangeEvent } from 'react';
 import { Form, Alert } from 'react-bootstrap';
-import emailjs from '@emailjs/browser';
-import Button from '../common/Button';
+
+import Button from '@/components/common/Button';
 
 import '@/styles/components/ContactForm.scss';
 

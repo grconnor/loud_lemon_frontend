@@ -118,7 +118,8 @@
       }
 
       &.active {
-        color: $white !important;
+        color: $dark !important;
+        background-color: #f5c02c1a;
       }
     }
   }

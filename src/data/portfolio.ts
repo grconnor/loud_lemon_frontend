@@ -20,7 +20,7 @@ export const projects: PortfolioProject[] = [
     title: 'Brand Identity Redesign',
     category: 'Branding',
     description:
-      'A complete brand overhaul including logo design, color palette, and comprehensive brand guidelines.',
+      'A complete brand overhaul including logo design, color palette and comprehensive brand guidelines.',
     image: 'https://placehold.co/600x400/2A82D7/FFFFFF?text=Brand+Identity',
     tags: ['Branding', 'Design', 'Guidelines'],
   },

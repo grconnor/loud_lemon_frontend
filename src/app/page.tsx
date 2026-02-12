@@ -1,8 +1,9 @@
 import { Container, Row, Col } from 'react-bootstrap';
+
 import Hero from '@/components/common/Hero';
-import SectionHeading from '@/components/common/SectionHeading';
 import Card from '@/components/common/Card';
 import Button from '@/components/common/Button';
+import SectionHeading from '@/components/common/SectionHeading';
 
 import { features, stats } from '@/data/home';
 

@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-// import { Card as BSCard } from "react-bootstrap";
 import BSCard from 'react-bootstrap/Card';
 import CardBody from 'react-bootstrap/CardBody';
 import CardImg from 'react-bootstrap/CardImg';
