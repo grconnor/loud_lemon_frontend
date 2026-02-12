@@ -1,7 +1,7 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "./Button";
+import { Container, Row, Col } from 'react-bootstrap';
+import Button from './Button';
 
-import "@/styles/components/Hero.scss";
+import '@/styles/components/Hero.scss';
 
 interface HeroProps {
   title: string;

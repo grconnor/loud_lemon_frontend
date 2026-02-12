@@ -1,4 +1,4 @@
-@use "../variables" as *;
+@use '../variables' as *;
 
 .hero-section {
   padding: 6rem 0;
@@ -11,7 +11,7 @@
   overflow: hidden;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -50%;
     right: -10%;
@@ -27,7 +27,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -30%;
     left: -5%;

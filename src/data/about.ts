@@ -1,10 +1,10 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 import {
   HiOutlinePencilAlt,
   HiOutlineBadgeCheck,
   HiOutlineUsers,
   HiOutlineLightBulb,
-} from "react-icons/hi";
+} from 'react-icons/hi';
 
 export type ValueItem = {
   title: string;
@@ -14,27 +14,27 @@ export type ValueItem = {
 
 export const values: ValueItem[] = [
   {
-    title: "Creativity",
+    title: 'Creativity',
     description:
-      "We believe in pushing boundaries and thinking outside the box to deliver unique and innovative solutions.",
+      'We believe in pushing boundaries and thinking outside the box to deliver unique and innovative solutions.',
     icon: HiOutlinePencilAlt,
   },
   {
-    title: "Quality",
+    title: 'Quality',
     description:
       "Excellence is not an option, it's our standard. We're committed to delivering exceptional work every time.",
     icon: HiOutlineBadgeCheck,
   },
   {
-    title: "Collaboration",
+    title: 'Collaboration',
     description:
-      "Your success is our success. We work closely with our clients to ensure their vision comes to life.",
+      'Your success is our success. We work closely with our clients to ensure their vision comes to life.',
     icon: HiOutlineUsers,
   },
   {
-    title: "Innovation",
+    title: 'Innovation',
     description:
-      "We stay ahead of trends and technologies to provide cutting-edge solutions that give you a competitive edge.",
+      'We stay ahead of trends and technologies to provide cutting-edge solutions that give you a competitive edge.',
     icon: HiOutlineLightBulb,
   },
 ];
@@ -47,15 +47,15 @@ export type TeamMember = {
 
 export const team: TeamMember[] = [
   {
-    name: "Connor",
-    role: "Co-Founder & Technical Lead",
+    name: 'Connor',
+    role: 'Co-Founder & Technical Lead',
     description:
-      "Focused on crafting reliable, high-quality digital solutions using modern web technologies with a strong emphasis on performance, scalability and clean design.",
+      'Focused on crafting reliable, high-quality digital solutions using modern web technologies with a strong emphasis on performance, scalability and clean design.',
   },
   {
-    name: "Rick",
-    role: "Co-Founder & Managing Director",
+    name: 'Rick',
+    role: 'Co-Founder & Managing Director',
     description:
-      "Dedicated to guiding projects from concept to completion, ensuring clear communication, strategic direction and seamless delivery for every client.",
+      'Dedicated to guiding projects from concept to completion, ensuring clear communication, strategic direction and seamless delivery for every client.',
   },
 ];

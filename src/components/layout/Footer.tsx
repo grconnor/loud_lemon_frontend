@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Container, Row, Col } from "react-bootstrap";
-import Link from "next/link";
-import "@/styles/components/Footer.scss";
+import { Container, Row, Col } from 'react-bootstrap';
+import Link from 'next/link';
+import '@/styles/components/Footer.scss';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -75,7 +75,10 @@ const Footer = () => {
                     hello@loudlemonstudio.com
                   </a>
                 </p>
-                <Link href="/contact" className="footer-cta btn btn-primary btn-sm mt-3">
+                <Link
+                  href="/contact"
+                  className="footer-cta btn btn-primary btn-sm mt-3"
+                >
                   Contact Us
                 </Link>
               </div>

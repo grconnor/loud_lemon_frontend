@@ -1,10 +1,10 @@
-import { Container, Row, Col } from "react-bootstrap";
-import SectionHeading from "@/components/common/SectionHeading";
-import Card from "@/components/common/Card";
+import { Container, Row, Col } from 'react-bootstrap';
+import SectionHeading from '@/components/common/SectionHeading';
+import Card from '@/components/common/Card';
 
-import { projects, PortfolioProject } from "@/data/portfolio";
+import { projects } from '@/data/portfolio';
 
-import "@/styles/pages/Portfolio.scss";
+import '@/styles/pages/Portfolio.scss';
 
 export default function PortfolioPage() {
   return (
@@ -32,7 +32,7 @@ export default function PortfolioPage() {
           />
 
           <Row className="gy-4">
-            {projects.map((project: PortfolioProject, index: number) => (
+            {projects.map((project, index: number) => (
               <Col key={index} lg={4} md={6}>
                 <Card
                   image={project.image}

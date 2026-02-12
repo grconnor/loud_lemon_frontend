@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import { Container, Nav, Navbar as BSNavbar } from "react-bootstrap";
+import Link from 'next/link';
+import Image from 'next/image';
+import { useState } from 'react';
+import { Container, Nav, Navbar as BSNavbar } from 'react-bootstrap';
 
-import "@/styles/components/Navbar.scss";
+import '@/styles/components/Navbar.scss';
 
 const NavBar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -33,7 +33,7 @@ const NavBar = () => {
         <BSNavbar.Toggle
           aria-controls="navbar-nav"
           className="custom-toggler"
-          onClick={() => setExpanded((prev) => !prev)}
+          onClick={() => setExpanded(prev => !prev)}
         >
           <span />
           <span />

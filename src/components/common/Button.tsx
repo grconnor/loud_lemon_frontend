@@ -1,14 +1,14 @@
-import { ReactNode } from "react";
-import { Button as BSButton } from "react-bootstrap";
+import { ReactNode } from 'react';
+import { Button as BSButton } from 'react-bootstrap';
 
-import "@/styles/components/Button.scss";
+import '@/styles/components/Button.scss';
 
 interface ButtonProps {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "outline-primary" | "outline-secondary";
-  size?: "sm" | "lg";
+  variant?: 'primary' | 'secondary' | 'outline-primary' | 'outline-secondary';
+  size?: 'sm' | 'lg';
   onClick?: () => void;
-  type?: "button" | "submit" | "reset";
+  type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
   href?: string;
@@ -16,11 +16,11 @@ interface ButtonProps {
 
 const Button = ({
   children,
-  variant = "primary",
+  variant = 'primary',
   size,
   onClick,
-  type = "button",
-  className = "",
+  type = 'button',
+  className = '',
   disabled = false,
   href,
 }: ButtonProps) => {

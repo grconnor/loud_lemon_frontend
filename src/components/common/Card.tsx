@@ -1,11 +1,11 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 // import { Card as BSCard } from "react-bootstrap";
-import BSCard from "react-bootstrap/Card";
-import CardBody from "react-bootstrap/CardBody";
-import CardImg from "react-bootstrap/CardImg";
-import CardTitle from "react-bootstrap/CardTitle";
+import BSCard from 'react-bootstrap/Card';
+import CardBody from 'react-bootstrap/CardBody';
+import CardImg from 'react-bootstrap/CardImg';
+import CardTitle from 'react-bootstrap/CardTitle';
 
-import "@/styles/components/Card.scss";
+import '@/styles/components/Card.scss';
 
 interface CardProps {
   title?: string;
@@ -20,13 +20,13 @@ const Card = ({
   title,
   children,
   image,
-  imageAlt = "",
-  className = "",
+  imageAlt = '',
+  className = '',
   hoverable = false,
 }: CardProps) => {
   return (
     <BSCard
-      className={`custom-card ${hoverable ? "hoverable" : ""} ${className}`}
+      className={`custom-card ${hoverable ? 'hoverable' : ''} ${className}`}
     >
       {image && (
         <CardImg variant="top" src={image} alt={imageAlt} loading="lazy" />
