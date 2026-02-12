@@ -1,11 +1,11 @@
-import { Container, Row, Col } from "react-bootstrap";
-import SectionHeading from "@/components/common/SectionHeading";
-import Card from "@/components/common/Card";
-import Button from "@/components/common/Button";
+import { Container, Row, Col } from 'react-bootstrap';
+import SectionHeading from '@/components/common/SectionHeading';
+import Card from '@/components/common/Card';
+import Button from '@/components/common/Button';
 
-import { services, process, ServiceItem, ProcessStep } from "@/data/services";
+import { services, process } from '@/data/services';
 
-import "@/styles/pages/Services.scss";
+import '@/styles/pages/Services.scss';
 
 export default function ServicesPage() {
   return (
@@ -33,7 +33,7 @@ export default function ServicesPage() {
           />
 
           <Row className="gy-4">
-            {services.map((service: ServiceItem, index: number) => {
+            {services.map((service, index: number) => {
               return (
                 <Col key={index} lg={4} md={6}>
                   <Card hoverable className="service-card h-100">
@@ -64,7 +64,7 @@ export default function ServicesPage() {
           />
 
           <Row className="gy-4">
-            {process.map((item: ProcessStep, index: number) => (
+            {process.map((item, index: number) => (
               <Col key={index} lg={4} md={6}>
                 <div className="process-item">
                   <div className="process-step">{item.step}</div>

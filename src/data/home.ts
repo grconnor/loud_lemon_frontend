@@ -1,9 +1,9 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 import {
   HiOutlineColorSwatch,
   HiOutlineCode,
   HiOutlineSparkles,
-} from "react-icons/hi";
+} from 'react-icons/hi';
 
 export type FeatureItem = {
   title: string;
@@ -13,21 +13,21 @@ export type FeatureItem = {
 
 export const features: FeatureItem[] = [
   {
-    title: "Web Design",
+    title: 'Web Design',
     description:
-      "Beautiful, modern websites that captivate your audience and deliver exceptional user experiences.",
+      'Beautiful, modern websites that captivate your audience and deliver exceptional user experiences.',
     icon: HiOutlineColorSwatch,
   },
   {
-    title: "Web Development",
+    title: 'Web Development',
     description:
-      "Robust, scalable web applications built with cutting-edge technologies and best practices.",
+      'Robust, scalable web applications built with cutting-edge technologies and best practices.',
     icon: HiOutlineCode,
   },
   {
-    title: "Brand Identity",
+    title: 'Brand Identity',
     description:
-      "Distinctive brand identities that make your business memorable and stand out from competitors.",
+      'Distinctive brand identities that make your business memorable and stand out from competitors.',
     icon: HiOutlineSparkles,
   },
 ];
@@ -38,8 +38,8 @@ export type StatItem = {
 };
 
 export const stats: StatItem[] = [
-  { number: "50+", label: "Projects Completed" },
-  { number: "40+", label: "Happy Clients" },
-  { number: "5+", label: "Years Experience" },
-  { number: "100%", label: "Client Satisfaction" },
+  { number: '50+', label: 'Projects Completed' },
+  { number: '40+', label: 'Happy Clients' },
+  { number: '5+', label: 'Years Experience' },
+  { number: '100%', label: 'Client Satisfaction' },
 ];

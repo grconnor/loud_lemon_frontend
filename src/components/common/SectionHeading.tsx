@@ -1,4 +1,4 @@
-import "@/styles/components/SectionHeading.scss";
+import '@/styles/components/SectionHeading.scss';
 
 interface SectionHeadingProps {
   title: string;
@@ -11,11 +11,11 @@ const SectionHeading = ({
   title,
   subtitle,
   centered = false,
-  className = "",
+  className = '',
 }: SectionHeadingProps) => {
   return (
     <div
-      className={`section-heading ${centered ? "text-center" : ""} ${className}`}
+      className={`section-heading ${centered ? 'text-center' : ''} ${className}`}
     >
       <h2 className="section-title">{title}</h2>
       {subtitle && <p className="section-subtitle">{subtitle}</p>}

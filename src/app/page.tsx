@@ -1,12 +1,12 @@
-import { Container, Row, Col } from "react-bootstrap";
-import Hero from "@/components/common/Hero";
-import SectionHeading from "@/components/common/SectionHeading";
-import Card from "@/components/common/Card";
-import Button from "@/components/common/Button";
+import { Container, Row, Col } from 'react-bootstrap';
+import Hero from '@/components/common/Hero';
+import SectionHeading from '@/components/common/SectionHeading';
+import Card from '@/components/common/Card';
+import Button from '@/components/common/Button';
 
-import { features, stats, FeatureItem, StatItem } from "@/data/home";
+import { features, stats, FeatureItem, StatItem } from '@/data/home';
 
-import "@/styles/pages/Home.scss";
+import '@/styles/pages/Home.scss';
 
 export default function HomePage() {
   return (
