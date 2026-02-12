@@ -1,11 +1,19 @@
+import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
-import SectionHeading from '@/components/common/SectionHeading';
+
 import Card from '@/components/common/Card';
 import Button from '@/components/common/Button';
+import SectionHeading from '@/components/common/SectionHeading';
 
 import { services, process } from '@/data/services';
 
 import '@/styles/pages/Services.scss';
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description:
+    'Explore LoudLemon Studio’s web design, branding and development services.',
+};
 
 export default function ServicesPage() {
   return (

@@ -39,7 +39,7 @@ export type StatItem = {
 
 export const stats: StatItem[] = [
   { number: '50+', label: 'Projects Completed' },
-  { number: '40+', label: 'Happy Clients' },
-  { number: '5+', label: 'Years Experience' },
+  { number: '25+', label: 'Happy Clients' },
+  { number: '4+', label: 'Years Experience' },
   { number: '100%', label: 'Client Satisfaction' },
 ];

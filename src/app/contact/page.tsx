@@ -1,13 +1,19 @@
-'use client';
-
+import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
-import SectionHeading from '@/components/common/SectionHeading';
-import ContactForm from '@/components/forms/ContactForm';
+
 import Card from '@/components/common/Card';
+import ContactForm from '@/components/forms/ContactForm';
+import SectionHeading from '@/components/common/SectionHeading';
 
 import { contactMethods } from '@/data/contact';
 
 import '@/styles/pages/Contact.scss';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description:
+    'Get in touch with LoudLemon Studio to discuss web design, branding or digital strategy for your business.',
+};
 
 export default function ContactPage() {
   return (

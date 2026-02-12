@@ -1,10 +1,18 @@
+import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
-import SectionHeading from '@/components/common/SectionHeading';
+
 import Card from '@/components/common/Card';
+import SectionHeading from '@/components/common/SectionHeading';
 
 import { projects } from '@/data/portfolio';
 
 import '@/styles/pages/Portfolio.scss';
+
+export const metadata: Metadata = {
+  title: 'Portfolio',
+  description:
+    'View selected web design and branding projects by LoudLemon Studio.',
+};
 
 export default function PortfolioPage() {
   return (
