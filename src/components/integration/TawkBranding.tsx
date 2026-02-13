@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-export default function HideTawk() {
+export default function TawkBranding() {
   useEffect(() => {
     const processedIframes = new WeakSet<HTMLIFrameElement>();
 
