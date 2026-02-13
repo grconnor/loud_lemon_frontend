@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Script from 'next/script';
 import type { Metadata } from 'next';
 
@@ -46,11 +47,6 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
-        <Script
-          type="text/javascript"
-          src="https://embed.tawk.to/698d8903b9fcfa1c3266254d/1jh8dudke"
-          async
-        />
       </body>
     </html>
   );
