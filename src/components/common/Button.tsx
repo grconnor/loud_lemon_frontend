@@ -20,7 +20,7 @@ const Button = ({
   size,
   onClick,
   type = 'button',
-  className = '',
+  className = 'custom-button',
   disabled = false,
   href,
 }: ButtonProps) => {

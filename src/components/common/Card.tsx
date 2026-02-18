@@ -1,4 +1,7 @@
+"use client";
+
 import { ReactNode } from 'react';
+import { motion } from "motion/react";
 import BSCard from 'react-bootstrap/Card';
 import CardBody from 'react-bootstrap/CardBody';
 import CardImg from 'react-bootstrap/CardImg';
@@ -24,17 +27,25 @@ const Card = ({
   hoverable = false,
 }: CardProps) => {
   return (
-    <BSCard
-      className={`custom-card ${hoverable ? 'hoverable' : ''} ${className}`}
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 1, ease: 'easeOut' }}
+      whileHover={hoverable ? { y: -8, scale: 1.02 } : undefined}
     >
-      {image && (
-        <CardImg variant="top" src={image} alt={imageAlt} loading="lazy" />
-      )}
-      <CardBody>
-        {title && <CardTitle>{title}</CardTitle>}
-        {children}
-      </CardBody>
-    </BSCard>
+      <BSCard
+        className={`custom-card ${hoverable ? 'hoverable' : ''} ${className}`}
+      >
+        {image && (
+          <CardImg variant="top" src={image} alt={imageAlt} loading="lazy" />
+        )}
+        <CardBody>
+          {title && <CardTitle>{title}</CardTitle>}
+          {children}
+        </CardBody>
+      </BSCard>
+    </motion.div>
   );
 };
 
