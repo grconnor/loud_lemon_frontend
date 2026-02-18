@@ -1,4 +1,7 @@
+'use client';
+
 import { Container, Row, Col } from 'react-bootstrap';
+import { motion } from 'motion/react';
 
 import Button from '@/components/common/Button';
 
@@ -27,11 +30,30 @@ const Hero = ({
         <Row className="align-items-center">
           <Col lg={12}>
             <div className="hero-content text-center">
-              <h1 className="hero-title">{title}</h1>
-              <p className="hero-subtitle">{subtitle}</p>
+              <motion.h1
+                className="hero-title"
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: 'easeOut' }}
+              >
+                {title}
+              </motion.h1>
+              <motion.p
+                className="hero-subtitle"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2, duration: 0.6 }}
+              >
+                {subtitle}
+              </motion.p>
 
               {(primaryButtonText || secondaryButtonText) && (
-                <div className="hero-buttons">
+                <motion.div
+                  className="hero-buttons"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
+                >
                   {primaryButtonText && (
                     <Button
                       variant="primary"
@@ -53,7 +75,7 @@ const Hero = ({
                       {secondaryButtonText}
                     </Button>
                   )}
-                </div>
+                </motion.div>
               )}
             </div>
           </Col>

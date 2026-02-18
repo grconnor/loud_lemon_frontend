@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Hero from '@/components/common/Hero';
 import Card from '@/components/common/Card';
 import Button from '@/components/common/Button';
+import StatCounter from '@/components/common/StatCounter';
 import SectionHeading from '@/components/common/SectionHeading';
 
 import { features, stats } from '@/data/home';
@@ -53,7 +54,13 @@ export default function HomePage() {
             {stats.map((stat, index: number) => (
               <Col key={index} lg={3} md={6}>
                 <div className="stat-item text-center">
-                  <h2 className="stat-number">{stat.number}</h2>
+                  <h2 className="stat-number">
+                    <StatCounter
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      duration={1}
+                    />
+                  </h2>
                   <p className="stat-label">{stat.label}</p>
                 </div>
               </Col>

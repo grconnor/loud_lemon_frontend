@@ -7,6 +7,7 @@ import SectionHeading from '@/components/common/SectionHeading';
 import { projects } from '@/data/portfolio';
 
 import '@/styles/pages/Portfolio.scss';
+import PageHero from '@/components/common/PageHero';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -17,19 +18,10 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <>
-      <section className="portfolio-hero section-padding">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="page-title">Our Portfolio</h1>
-              <p className="page-subtitle">
-                Explore our latest projects and see how we&apos;ve helped
-                businesses create exceptional digital experiences.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <PageHero
+        title="Our Portfolio"
+        subtitle="Explore our latest projects and see how we've helped businesses create exceptional digital experiences."
+      />
 
       <section className="section-padding">
         <Container>

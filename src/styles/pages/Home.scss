@@ -1,5 +1,3 @@
-@use '../variables' as *;
-
 .feature-icon {
   color: $primary;
   font-size: 3rem;
@@ -62,7 +60,7 @@
 
   .custom-button {
     background-color: $white;
-    color: $primary;
+    color: $dark;
     border-color: $white;
 
     &:hover,
