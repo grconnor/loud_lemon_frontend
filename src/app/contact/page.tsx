@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import Card from '@/components/common/Card';
+import PageHero from '@/components/common/PageHero';
 import ContactForm from '@/components/forms/ContactForm';
 import SectionHeading from '@/components/common/SectionHeading';
 
@@ -18,19 +19,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="contact-hero section-padding">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="page-title">Get In Touch</h1>
-              <p className="page-subtitle">
-                Have a project in mind or just want to say hello? We&apos;d love
-                to hear from you. Fill out the form below or reach out directly.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <PageHero
+        title="Get In Touch"
+        subtitle="Have a project in mind or just want to say hello? We'd love to hear from you. Fill out the form below or reach out directly."
+      />
 
       <section className="contact-methods section-padding-sm">
         <Container>

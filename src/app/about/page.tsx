@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import Card from '@/components/common/Card';
+import PageHero from '@/components/common/PageHero';
 import SectionHeading from '@/components/common/SectionHeading';
 
 import { values, team } from '@/data/about';
@@ -17,19 +18,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="about-hero section-padding">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="page-title">About LoudLemon Studio</h1>
-              <p className="page-subtitle">
-                We&apos;re a dynamic duo passionate about crafting exceptional
-                web experiences and building memorable brands that resonate.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <PageHero
+        title="About LoudLemon Studio"
+        subtitle="We're a dynamic duo passionate about crafting exceptional web experiences and building memorable brands that resonate."
+      />
 
       <section className="section-padding">
         <Container>
@@ -102,10 +94,10 @@ export default function AboutPage() {
             centered
           />
 
-          <Row className="gy-4 justify-content-center">
+          <Row className="gy-4 justify-content-center align-items-stretch">
             {team.map((member, index: number) => (
               <Col key={index} lg={5} md={6}>
-                <Card>
+                <Card className='team-card'>
                   <div className="team-member">
                     <div className="member-avatar">{member.name[0]}</div>
                     <h3 className="member-name">{member.name}</h3>

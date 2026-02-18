@@ -33,13 +33,14 @@ export const features: FeatureItem[] = [
 ];
 
 export type StatItem = {
-  number: string;
+  value: number;
+  suffix?: string;
   label: string;
 };
 
 export const stats: StatItem[] = [
-  { number: '50+', label: 'Projects Completed' },
-  { number: '25+', label: 'Happy Clients' },
-  { number: '4+', label: 'Years Experience' },
-  { number: '100%', label: 'Client Satisfaction' },
+  { value: 50, suffix: '+', label: 'Projects Completed' },
+  { value: 25, suffix: '+', label: 'Happy Clients' },
+  { value: 4, suffix: '+', label: 'Years Experience' },
+  { value: 100, suffix: '%', label: 'Client Satisfaction' },
 ];

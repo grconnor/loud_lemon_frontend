@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 import { ReactNode } from 'react';
-import { motion } from "motion/react";
+import { motion } from 'motion/react';
 import BSCard from 'react-bootstrap/Card';
 import CardBody from 'react-bootstrap/CardBody';
 import CardImg from 'react-bootstrap/CardImg';
@@ -28,6 +28,7 @@ const Card = ({
 }: CardProps) => {
   return (
     <motion.div
+      className="h-100 d-flex"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: 0.2 }}

@@ -8,6 +8,7 @@ import SectionHeading from '@/components/common/SectionHeading';
 import { services, process } from '@/data/services';
 
 import '@/styles/pages/Services.scss';
+import PageHero from '@/components/common/PageHero';
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -18,19 +19,10 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      <section className="services-hero section-padding">
-        <Container>
-          <Row>
-            <Col lg={8} className="mx-auto text-center">
-              <h1 className="page-title">Our Services</h1>
-              <p className="page-subtitle">
-                Full-service digital solutions crafted to elevate your brand,
-                engage your audience and drive real business growth.
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+      <PageHero
+        title="Our Services"
+        subtitle="Full-service digital solutions crafted to elevate your brand, engage your audience and drive real business growth."
+      />
 
       <section className="section-padding">
         <Container>

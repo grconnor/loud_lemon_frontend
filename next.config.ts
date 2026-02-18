@@ -6,7 +6,8 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   sassOptions: {
     includePaths: ['src/styles'],
-    quiteDeps: true,
+    quietDeps: true,
+    additionalData: `@use "@/styles/index.scss" as *;`,
     silenceDeprecations: [
       'import',
       'color-functions',
