@@ -7,6 +7,7 @@ import ContactForm from '@/components/forms/ContactForm';
 import SectionHeading from '@/components/common/SectionHeading';
 
 import { contactMethods } from '@/data/contact';
+import { FAQS } from '@/data/faq';
 
 import '@/styles/pages/Contact.scss';
 
@@ -79,37 +80,12 @@ export default function ContactPage() {
               />
 
               <div className="faq-list">
-                <div className="faq-item">
-                  <h3 className="faq-question">
-                    What is your typical project timeline?
-                  </h3>
-                  <p className="faq-answer">
-                    Project timelines vary based on scope and complexity.
-                    Typically, a standard website takes 4-8 weeks from initial
-                    consultation to launch. We&apos;ll provide a detailed
-                    timeline during our discovery phase.
-                  </p>
-                </div>
-
-                <div className="faq-item">
-                  <h3 className="faq-question">
-                    Do you offer ongoing support after launch?
-                  </h3>
-                  <p className="faq-answer">
-                    Yes! We offer maintenance and support packages to keep your
-                    website running smoothly, secure, and up-to-date. We&apos;re
-                    here for you long after launch.
-                  </p>
-                </div>
-
-                <div className="faq-item">
-                  <h3 className="faq-question">What is your pricing model?</h3>
-                  <p className="faq-answer">
-                    Each project is unique, so we provide custom quotes based on
-                    your specific requirements. Contact us to discuss your
-                    project and receive a detailed proposal.
-                  </p>
-                </div>
+                {FAQS.map((faq, index) => (
+                  <div className="faq-item" key={index}>
+                    <h3 className="faq-question">{faq.question}</h3>
+                    <p className="faq-answer">{faq.answer}</p>
+                  </div>
+                ))}
               </div>
             </Col>
           </Row>
